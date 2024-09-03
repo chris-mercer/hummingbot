@@ -38,10 +38,10 @@ class TriangularArbitrage(ScriptStrategyBase):
     """
     # Config params
     connector_name: str = "coinbase_advanced_trade"
-    first_pair: str = "ETC-USD"
+    first_pair: str = "BTC-USDC"
     second_pair: str = "ETC-BTC"
-    third_pair: str = "BTC-USD"
-    holding_asset: str = "USD"
+    third_pair: str = "ETC-USDC"
+    holding_asset: str = "USDC"
 
     min_profitability: Decimal = Decimal("0.3")
     order_amount_in_holding_asset: Decimal = Decimal("100")
