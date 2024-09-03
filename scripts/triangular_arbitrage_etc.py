@@ -41,7 +41,7 @@ class TriangularArbitrage(ScriptStrategyBase):
     first_pair: str = "ETC-USD"
     second_pair: str = "ETC-BTC"
     third_pair: str = "BTC-USD"
-    holding_asset: str = "USD"
+    holding_asset: str = "USDC"
 
     min_profitability: Decimal = Decimal("0.5")
     order_amount_in_holding_asset: Decimal = Decimal("20")
