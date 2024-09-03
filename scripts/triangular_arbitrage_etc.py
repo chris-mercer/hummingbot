@@ -38,16 +38,16 @@ class TriangularArbitrage(ScriptStrategyBase):
     """
     # Config params
     connector_name: str = "coinbase_advanced_trade"
-    first_pair: str = "BTC-USD"
+    first_pair: str = "ETC-USD"
     second_pair: str = "ETC-BTC"
-    third_pair: str = "ETC-USD"
+    third_pair: str = "BTC-USD"
     holding_asset: str = "USD"
 
-    min_profitability: Decimal = Decimal("0.7")
+    min_profitability: Decimal = Decimal("0.3")
     order_amount_in_holding_asset: Decimal = Decimal("100")
 
     kill_switch_enabled: bool = True
-    kill_switch_rate = Decimal("-2")
+    kill_switch_rate = Decimal("-1")
 
     # Class params
     status: str = "NOT_INIT"
@@ -69,7 +69,7 @@ class TriangularArbitrage(ScriptStrategyBase):
     @property
     def connector(self):
         """
-        The only connector in this strategy, define it here for easy access
+        The only connector in this strategy, define it here for easy access. Coinbase Advanced Trade
         """
         return self.connectors[self.connector_name]
 
