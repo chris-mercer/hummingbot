@@ -43,7 +43,7 @@ class TriangularArbitrage(ScriptStrategyBase):
     third_pair: str = "ETC-USDC"
     holding_asset: str = "USDC"
 
-    min_profitability: Decimal = Decimal("0.3")
+    min_profitability: Decimal = Decimal("0.003")
     order_amount_in_holding_asset: Decimal = Decimal("100")
 
     kill_switch_enabled: bool = True
